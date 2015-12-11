@@ -1,0 +1,119 @@
+              %******************************************%
+              %                                          %
+              % Modello di tesi di laurea o di dottorato %
+              %            di Lorenzo Pantieri ©         %
+              %                                          %
+              %         versione: 9 maggio 2012          %
+              %                                          %
+              %******************************************%
+       
+
+% I seguenti commenti speciali impostano:
+% 1. applemac come codifica di input,
+% 2. PDFLaTeX come motore di composizione;
+% 3. Tesi.tex come documento principale;
+% 4. il controllo ortografico italiano per l'editor.
+
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = Tesi.tex
+% !TEX spellcheck = it-IT
+
+\documentclass[10pt,%                      % corpo del font principale
+               a4paper,%                   % carta A4
+               twoside,openright,%         % fronte-retro
+%              oneside,openany,%           % solo fronte
+               ]{book}
+               
+\usepackage[T1]{fontenc}                   % codifica dei font:
+                                           % NOTA BENE! richiede una distribuzione *completa* di LaTeX
+
+\usepackage[utf8]{inputenc}                % codifica di input; anche [latin1] va bene
+                                           % NOTA BENE! va accordata con le preferenze dell'editor
+
+\usepackage{microtype}                     % microtipografia
+
+\usepackage[english,italian]{babel}        % per scrivere in italiano e in inglese;
+                                           % l'ultima lingua (l'italiano) risulta predefinita
+                                           
+\usepackage[binding=5mm]{layaureo}         % margini ottimizzati per l'A4; rilegatura di 5 mm
+
+\usepackage[suftesi]{frontespizio}         % frontespizo
+                                           % per includerlo nel documento bisogna:
+                                           % 1. compilare una prima volta Tesi.tex;
+                                           % 2. compilare a parte Tesi-frn.tex, generato dalla compilazione precedente;
+                                           % 3. compilare ancora Tesi.tex. 
+
+\usepackage{emptypage}                     % pagine vuote senza testatina e piede di pagina
+
+\usepackage{indentfirst}                   % rientra il primo paragrafo di ogni sezione
+
+\usepackage{booktabs}                      % tabelle
+
+\usepackage{tabularx}                      % tabelle di larghezza prefissata
+
+\usepackage{graphicx}                      % immagini
+
+\usepackage{subfig}                        % sottofigure, sottotabelle
+
+\usepackage{caption}                       % didascalie
+
+\usepackage{listings}                      % codici
+
+\usepackage[font=small]{quoting}           % citazioni
+
+\usepackage{amsmath,amssymb,amsthm}        % matematica
+
+\usepackage[italian]{varioref}             % riferimenti completi della pagina
+
+\usepackage{mparhack,fixltx2e,relsize}     % finezze tipografiche
+
+\usepackage[style=philosophy-modern,hyperref,backref,square,natbib]{biblatex}
+                                           % eccellente pacchetto per la bibliografia;
+                                           % produce uno stile di citazione autore-anno; 
+                                           % lo stile "numeric-comp" produce riferimenti numerici
+                                          
+\bibliography{Bibliografia}                % database di biblatex 
+                                          
+\usepackage{chngpage,calc}                 % centra il frontespizio
+
+\usepackage[dvipsnames]{xcolor}            % colori
+
+\usepackage{lipsum}                        % testo fittizio
+
+\usepackage{eurosym}                       % simbolo dell'euro
+
+\usepackage{hyperref}                      % collegamenti ipertestuali
+
+\usepackage{bookmark}                      % segnalibri
+
+\input{impostazioni-tesi}                  % file con le impostazioni personali
+
+\begin{document}
+\frontmatter
+%******************************************************************
+% Materiale iniziale
+%******************************************************************
+\input{MaterialeInizialeFinale/Frontespizio}
+\input{MaterialeInizialeFinale/Colophon}
+\input{MaterialeInizialeFinale/Dedica}
+\input{MaterialeInizialeFinale/Indici}
+\input{MaterialeInizialeFinale/Sommario+Abstract}
+\input{MaterialeInizialeFinale/Ringraziamenti}
+\input{MaterialeInizialeFinale/Introduzione}
+\cleardoublepage
+%******************************************************************
+% Materiale principale
+%******************************************************************
+\mainmatter
+\input{Capitoli/Lorem}
+\input{Capitoli/Ipsum}
+\appendix
+\input{Capitoli/Dolor}
+% *****************************************************************
+% Materiale finale
+%******************************************************************
+\backmatter
+\input{MaterialeInizialeFinale/Bibliografia}
+\input{MaterialeInizialeFinale/Dichiarazione}
+\end{document}
