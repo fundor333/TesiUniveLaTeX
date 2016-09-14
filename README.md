@@ -1,29 +1,15 @@
-# README #
+# Modello di tesi per LaTeX per UniVe #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Questo è un tema NON UFFICIALE per l'università di Venezia Ca'Foscari.
 
-### What is this repository for? ###
+E' stato costruito per la mia tesi e presenta tutto il materiale necessario per produrre una tesi.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Prerequisiti ##
+Si suggerisce l'utilizzo di una installazione completa di LaTeX. In oltre suggerisco TexStudio come ide
 
-### How do I get set up? ###
+## Compilare ##
+La tesi non ha nessuna differenza da i normali file tex per quanto riguarda le impostazioni bibliografiche.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Per quanto riguarda la copertina invece è necessario prima compilare il file Frontespizio.tex . Questo produrrà un file Tesi-fm.tex che va compilato a sua volta.
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Finito tutto questo, appena ricompili Tesi.tex avrai l'aggiornamento della copertina della tesi.
